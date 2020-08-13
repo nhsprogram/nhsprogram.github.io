@@ -12,8 +12,10 @@
     />
     <link rel="stylesheet" href="main.css" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-translucent fixed-top">
+  <body data-spy="scroll" data-target="#collapse">
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-translucent shadow fixed-top"
+    >
       <div class="container">
         <button
           onclick="$('html, body').animate({ scrollTop: $('#home').offset().top }, 500);"
@@ -33,24 +35,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapse">
-          <ul class="navbar-nav w-100">
+          <ul class="nav navbar-nav w-100">
             <li class="nav-item ml-md-auto">
-              <button
-                onclick="$('html, body').animate({ scrollTop: $('#home').offset().top }, 500);"
-                class="nav-link btn btn-link"
-              >
-                Home
-              </button>
-            </li>
-            <!-- <li class="nav-item">
-              <a href="" class="nav-link">
-                Officers
-              </a>
-            </li> -->
-            <li class="nav-item">
-              <!-- <a href="#competitions" class="nav-link">
-                Competitions
-              </a> -->
               <button
                 onclick="$('html, body').animate({ scrollTop: $('#competitions').offset().top }, 500);"
                 class="nav-link btn btn-link"
@@ -72,10 +58,16 @@
     </nav>
     <div id="home"></div>
     <div class="container-fluid" id="hero">
-      <div class="container text-light" id="hero-heading">
-        <h1 class="display-1 text-center">
+      <div class="container text-light text-center" id="hero-heading">
+        <h1 class="display-1">
           NHS Programming Club
         </h1>
+        <button
+          class="btn bg-transparent text-light mt-5"
+          onclick="$('html, body').animate({ scrollTop: $('#competitions').offset().top }, 500);"
+        >
+          <ion-icon name="chevron-down-outline" size="large"></ion-icon>
+        </button>
       </div>
     </div>
     <div class="container-fluid bg-dark text-light" id="competitions">
@@ -95,7 +87,9 @@
         </div>
       </div>
     </div>
-    <div class="hr bg-light"></div>
+    <div class="hr-container bg-dark">
+      <div class="hr bg-secondary col-4 mx-auto"></div>
+    </div>
     <div class="container-fluid bg-dark text-light" id="join">
       <div class="container py-4">
         <h1 class="display-3 pt-5">
@@ -106,16 +100,16 @@
             Information you need to know before you sign up:
           </p>
           <ul>
-            <li><u>Club Dues:</u> $10</li>
-            <li><u>Meetings:</u> Weekly on Mondays</li>
-            <li>Competition registration cost is covered by club fees.</li>
+            <li><b>Club Dues:</b> $10</li>
+            <li class="small ml-4">Club dues cover registration cost.</li>
+            <li><b>Meetings:</b> Weekly on Mondays</li>
           </ul>
           <a
-            href="#join"
+            href="https://forms.gle/wFPx6T6Hr1zi6RMn6"
             class="btn btn-primary"
-            onclick="alert('Add Google Form link.')"
+            target="a"
           >
-            Sign me up!
+            Sign up!
           </a>
         </div>
       </div>
@@ -129,6 +123,14 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
       integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
       crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"
     ></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
