@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NHS Programming Club</title>
     <link rel="stylesheet" href="./main.min.css" />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   </head>
   <body data-spy="scroll" data-target="#collapse">
     <nav class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top">
       <div class="container">
         <button
           onclick="$('html, body').animate({ scrollTop: $('#home').offset().top }, 500);"
-          class="navbar-brand btn btn-link"
+          class="navbar-brand btn btn-default bg-light mt-4"
         >
-          <img src="./assets/logo.png" alt="logo" width="100" height="50" />
+          <img src="./assets/logo.png" alt="logo" width="130" height="65" />
         </button>
         <button
           class="navbar-toggler"
@@ -50,25 +50,27 @@
       </div>
     </nav>
     <div id="home"></div>
-    <div class="container-fluid" id="hero">
+    <section class="container-fluid" id="hero">
       <div class="container text-light text-center" id="hero-heading">
         <h1 class="display-1">
           NHS Programming Club
         </h1>
         <div class="row display-5 mt-4 mb-4" id="text-carousel">
           <span>Learn the power of coding.</span>
+          <span>Expand your skills.</span>
           <span>Test your skills in competitions.</span>
+          <span>Make invaluable connections.</span>
           <span>Join today!</span>
         </div>
         <button
           class="btn text-light mt-5"
-          onclick="$('html, body').animate({ scrollTop: $('#competitions').offset().top }, 500);"
+          onclick="$('html, body').animate({ scrollTop: $('#join').offset().top }, 500);"
         >
           <ion-icon name="chevron-down-outline" size="large"></ion-icon>
         </button>
       </div>
-    </div>
-    <div class="container-fluid" id="competitions">
+    </section>
+    <section class="container-fluid" id="competitions">
       <div class="container py-4">
         <h1 class="display-3 pt-5">
           Competitions
@@ -84,9 +86,9 @@
           </ul>
         </div>
       </div>
-    </div>
+    </section>
     <hr class="col-4 mx-auto" />
-    <div class="container-fluid" id="join">
+    <section class="container-fluid" id="join">
       <div class="container py-4">
         <h1 class="display-3 pt-5">
           Sign Up
@@ -109,7 +111,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
